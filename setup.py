@@ -38,8 +38,8 @@ setup(
     packages=find_packages(exclude=['docs', 'tests*']),
     include_package_data=True,
     author='Matthew Williams',
+    author_email='mgwilliams@gmail.com',
     url='http://github.com/mgwilliams/aiotools',
     install_requires=install_requires,
     dependency_links=dependency_links,
-    author_email=''
 )
