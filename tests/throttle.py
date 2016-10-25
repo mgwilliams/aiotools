@@ -26,5 +26,11 @@ class TestThrottle(asynctest.ClockedTestCase):
             await self.advance(1)
             self.assertEqual(len([i for i in finished if i]), 100)
 
+    async def test_max(self):
+        throttle = Throttle(max=1)
+        await throttle.acquire()
+        self.assertTrue(throttle.locked())
+
+
 if __name__ == '__main__':
     asynctest.main()
