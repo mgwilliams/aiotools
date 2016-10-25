@@ -26,4 +26,4 @@ class Throttle(asyncio.Semaphore):
         else:
             self.allowance -= 1
 
-        return super(Throttle, self).acquire()
+        return await super(Throttle, self).acquire()
